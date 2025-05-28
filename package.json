@@ -1,6 +1,6 @@
 {
   "name": "resolve-stack-sources",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "commonjs",
   "exports": {
     "types": "./dist/index.d.ts",
