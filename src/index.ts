@@ -65,9 +65,9 @@ function getSourceMappingPrepareStackTrace(
     return sourceMappingPrepareStackTrace
   }
 
-  // eslint-disable-next-line @typescript-eslint/consistent-type-imports
   const support: typeof import('@cspotcode/source-map-support') =
     getFreshSourceMapSupport()
+
   const originalPrepareStackTrace = Error.prepareStackTrace
   support.install({
     environment: 'node',
@@ -150,7 +150,6 @@ export function getFreshSourceMapSupport(): typeof import('@cspotcode/source-map
 const CALL_SITE_REGEXP =
   // Validation errors from `wrangler deploy` have a 2 space indent, whereas
   // regular stack traces have a 4 space indent.
-  // eslint-disable-next-line no-control-regex
   /^(?:\s+(?:\x1B\[\d+m)?'?)? {2,4}at (?:(.+?)\s+\()?(?:(.+?):(\d+)(?::(\d+))?|([^)]+))\)?/gm
 
 function lineMatchToCallSite(lineMatch: RegExpMatchArray): CallSite {
@@ -232,7 +231,6 @@ class CallSite implements NodeJS.CallSite {
   getTypeName(): string | null {
     return this.opts.typeName
   }
-  // eslint-disable-next-line @typescript-eslint/ban-types
   getFunction(): Function | undefined {
     return undefined
   }
