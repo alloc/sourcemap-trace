@@ -242,8 +242,8 @@ class CallSite implements NodeJS.CallSite {
   getMethodName(): string | null {
     return this.opts.methodName
   }
-  getFileName(): string | undefined {
-    return this.opts.fileName ?? undefined
+  getFileName(): string {
+    return this.opts.fileName
   }
   getScriptNameOrSourceURL(): string {
     return this.opts.fileName
