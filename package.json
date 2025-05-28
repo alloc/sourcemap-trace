@@ -1,7 +1,7 @@
 {
   "name": "resolve-stack-sources",
-  "type": "module",
   "version": "1.0.0",
+  "type": "commonjs",
   "exports": {
     "types": "./dist/index.d.ts",
     "default": "./dist/index.js"
@@ -17,8 +17,8 @@
   },
   "prettier": "@alloc/prettier-config",
   "scripts": {
-    "dev": "rimraf dist && tsup --sourcemap --watch",
-    "build": "rimraf dist && tsup",
+    "dev": "rimraf dist && tsup-node --sourcemap --watch",
+    "build": "rimraf dist && tsup-node",
     "format": "prettier --write .",
     "lint": "tsc-lint",
     "prepublishOnly": "pnpm build"
