@@ -1,5 +1,5 @@
 {
-  "name": "sourcemap-trace",
+  "name": "resolve-stack-sources",
   "type": "module",
   "version": "1.0.0",
   "exports": {
@@ -13,7 +13,7 @@
   "author": "Alec Larson",
   "repository": {
     "type": "git",
-    "url": "https://github.com/alloc/sourcemap-trace.git"
+    "url": "https://github.com/alloc/resolve-stack-sources.git"
   },
   "prettier": "@alloc/prettier-config",
   "scripts": {

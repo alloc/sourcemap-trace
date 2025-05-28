@@ -1,15 +1,15 @@
-# sourcemap-trace
+# resolve-stack-sources
 
 Rewrite a stack trace with source maps. This package was extracted from [wrangler](https://github.com/cloudflare/workers-sdk/blob/main/packages/wrangler/) to be used by other frameworks.
 
 ```
-pnpm add sourcemap-trace
+pnpm add resolve-stack-sources
 ```
 
 ## Usage
 
 ```ts
-import { getSourceMappedString } from 'sourcemap-trace'
+import { getSourceMappedString } from 'resolve-stack-sources'
 
 const sourceMappedStackTrace = getSourceMappedString(error.stack)
 // => string
@@ -18,7 +18,7 @@ const sourceMappedStackTrace = getSourceMappedString(error.stack)
 You may pass a custom `retrieveSourceMap` function to the `getSourceMappedString` function.
 
 ```ts
-import { getSourceMappedString } from 'sourcemap-trace'
+import { getSourceMappedString } from 'resolve-stack-sources'
 
 function retrieveSourceMap(source: string) {
   // The `source` is the path to the source file.
